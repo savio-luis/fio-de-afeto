@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#F1E7DA"/>
+  <g stroke="#C9A98C" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M40 60 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+    <path d="M40 100 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+    <path d="M40 140 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+    <path d="M40 180 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+    <path d="M40 220 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+    <path d="M40 260 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+    <path d="M40 300 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+  </g>
+  <text x="200" y="360" font-family="Georgia, serif" font-size="18" fill="#8A6E52" text-anchor="middle">foto em breve</text>
+</svg>

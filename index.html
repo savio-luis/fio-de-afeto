@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fio de afeto — Crochê feito à mão</title>
+  <meta name="description" content="Peças de crochê feitas à mão por Sonia: xuxinhas, acessórios, roupas e itens de decoração, uma a uma, com carinho.">
+
+  <!-- Ícone que aparece na aba do navegador -->
+  <link rel="icon" type="image/png" href="favicon.svg">
+
+  <!--
+    Pré-visualização ao compartilhar o link (WhatsApp, Instagram, etc).
+    IMPORTANTE: troque "https://SEU-SITE-AQUI.com" pelo endereço real assim
+    que o site estiver no ar (GitHub Pages ou Netlify te dão esse link).
+    Sem essa troca, o link até funciona, mas a pré-visualização não aparece
+    corretamente em alguns apps.
+  -->
+  <meta property="og:title" content="Fio de Afeto — Crochê feito à mão">
+  <meta property="og:description" content="Xuxinhas, acessórios, roupas e itens de decoração em crochê, feitos à mão por Sonia.">
+  <meta property="og:image" content="https://SEU-SITE-AQUI.com/images/capa-compartilhamento.jpg">
+  <meta property="og:url" content="https://SEU-SITE-AQUI.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#topo" class="brand">Fio <span>de</span> Afeto</a>
+      <nav class="main-nav">
+        <a href="#pecas">Peças</a>
+        <a href="#sobre">Sobre</a>
+        <button id="conta-botao" class="conta-botao" type="button">Entrar</button>
+        <a href="#contato" class="nav-cta">Fazer pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="topo" class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <p class="hero-kicker">feito à mão, ponto por ponto</p>
+          <h1>Cada peça começa<br>com um único fio.</h1>
+          <p class="hero-lede">
+             bolsas, roupas e itens de acessórios em crochê,
+            feitos um a um, com o cuidado de quem faz com carinho pra você.
+          </p>
+          <a href="#pecas" class="btn btn-primary">Ver as peças</a>
+        </div>
+        <div class="hero-img-wrap">
+          <img class="hero-img" src="images/fio-de-afeto.jpeg" alt="Peça de crochê feita à mão"
+               data-tentativas="images/hero.jpeg,images/hero.png,images/placeholder.svg"
+               onerror="const t=this.dataset.tentativas.split(',');this.src=t.shift();this.dataset.tentativas=t.join(',');if(!t.length)this.onerror=null;">
+        </div>
+      </div>
+    </section>
+
+    <section id="destaques" class="destaques">
+      <div class="wrap">
+        <h2>Em destaque</h2>
+        <div id="destaques-grid" class="produtos-grid destaques-grid"></div>
+      </div>
+    </section>
+
+    <section id="pecas" class="loja">
+      <div class="wrap">
+        <div class="loja-header">
+          <h2>Todas as peças</h2>
+          <div class="filtros" id="filtros">
+            <button class="filtro ativo" data-cat="todos">Todos</button>
+            <button class="filtro" data-cat="xuxinha">Xuxinhas</button>
+            <button class="filtro" data-cat="roupa">Roupas</button>
+            <button class="filtro" data-cat="acessorio">Acessórios</button>
+            <button class="filtro" data-cat="decoracao">Decoração</button>
+          </div>
+        </div>
+        <div id="produtos-grid" class="produtos-grid"></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+      <div class="wrap sobre-inner">
+        <div class="sobre-img">
+          <img class="sobre-img-foto" src="images/soniafoto.jpeg" alt="Foto de quem faz as peças"
+               data-tentativas="images/sobre.jpeg,images/sobre.png,images/placeholder.svg"
+               onerror="const t=this.dataset.tentativas.split(',');this.src=t.shift();this.dataset.tentativas=t.join(',');if(!t.length)this.onerror=null;">
+        </div>
+        <div class="sobre-texto">
+          <h2>Sobre o ateliê</h2>
+          <p>
+            Cada peça sai das mãos da Sonia com todo cuidado: um colete em
+            crochê verde-militar, um lenço com pedrarias delicadas, xuxinhas
+            coloridas, descansos de copo e até canecas com capinha de crochê
+            e botão de madeira. É tempo, técnica e carinho em cada ponto.
+          </p>
+          <p>
+            Fazemos entregas combinadas por WhatsApp e aceitamos encomendas
+            personalizadas para presentes e datas especiais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <div class="wrap contato-inner">
+        <h2>Quer encomendar uma peça?</h2>
+        <p>Manda uma mensagem contando o que você procura — cor, tamanho, prazo — que a gente conversa.</p>
+        <a href="#" id="whatsapp-cta" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="conta-modal" class="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <button id="modal-fechar" class="modal-fechar" type="button" aria-label="Fechar">&times;</button>
+
+      <div id="modal-logado" hidden>
+        <h2 id="modal-titulo">Minha conta</h2>
+        <p class="modal-email-atual"></p>
+        <button id="botao-sair" class="btn btn-primary" type="button">Sair da conta</button>
+      </div>
+
+      <div id="modal-deslogado">
+        <div class="modal-tabs">
+          <button class="modal-tab ativo" data-tab="entrar" type="button">Entrar</button>
+          <button class="modal-tab" data-tab="cadastrar" type="button">Criar conta</button>
+        </div>
+
+        <form id="form-entrar" class="modal-form">
+          <h2 id="modal-titulo">Entrar</h2>
+          <label>
+            Email
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            Senha
+            <input type="password" name="senha" required autocomplete="current-password" minlength="6">
+          </label>
+          <p class="modal-erro" hidden></p>
+          <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+
+        <form id="form-cadastrar" class="modal-form" hidden>
+          <h2>Criar conta</h2>
+          <label>
+            Nome
+            <input type="text" name="nome" required autocomplete="name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            Senha
+            <input type="password" name="senha" required autocomplete="new-password" minlength="6">
+          </label>
+          <p class="modal-dica">Mínimo de 6 caracteres.</p>
+          <p class="modal-erro" hidden></p>
+          <button type="submit" class="btn btn-primary">Criar conta</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="foto-modal" class="modal-overlay" hidden>
+    <div class="foto-modal">
+      <button id="foto-modal-fechar" class="modal-fechar" type="button" aria-label="Fechar">&times;</button>
+      <div class="foto-modal-palco">
+        <button id="foto-anterior" class="foto-seta foto-seta-esq" type="button" aria-label="Foto anterior">&#8249;</button>
+        <img id="foto-modal-img" class="foto-modal-img" src="" alt="">
+        <button id="foto-proxima" class="foto-seta foto-seta-dir" type="button" aria-label="Próxima foto">&#8250;</button>
+      </div>
+      <p id="foto-modal-nome" class="foto-modal-nome"></p>
+      <p id="foto-modal-contador" class="foto-modal-contador"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>Ponto &amp; Fio — peças em crochê feitas à mão</span>
+      <span id="ano"></span>
+    </div>
+  </footer>
+
+  <!-- Firebase (usado só para login de cliente com email e senha) -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
